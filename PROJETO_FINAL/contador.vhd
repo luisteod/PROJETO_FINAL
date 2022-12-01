@@ -3,14 +3,14 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use ieee.std_logic_unsigned.all;
 
-entity cont_mod is
+entity contador is
 	port(
 		clk,rst : in  std_logic;
 		contagem : out std_logic_vector(7 downto 0)
 		);
 end entity;
 
-architecture behavioral of cont_mod is 
+architecture behavioral of contador is 
 	signal count : std_logic_vector(8 downto 0) := "000000000";
 	begin
 		contagem(7) <= count(7);
